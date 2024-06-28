@@ -3,7 +3,6 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "./components/common/NavBar";
 import { Footer } from "./components/common/Footer";
-import Cursor from "./components/common/cursor";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -21,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={"${urbanist.className} bg-white"}>
         <NavBar />
-        <Cursor />
         {children}
         <Footer />
       </body>
