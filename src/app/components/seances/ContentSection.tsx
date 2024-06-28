@@ -20,8 +20,8 @@ export const ContentSection = () => {
               la relecture, aussi bien dans le sens de l’orthographe mais aussi
               de la correction de lettres ambiguës. Le but de la remédiation est
               d’obtenir une écriture rapide et efficace avec le minimum de
-              tension. Le geste de l'écriture doit devenir inconscient. Une fois
-              l’automatisation obtenue, l’élève peut se lancer dans
+              tension. Le geste de l&apos;écriture doit devenir inconscient. Une
+              fois l’automatisation obtenue, l’élève peut se lancer dans
               l’orthographe, puis la rédaction et la planification de textes.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
@@ -73,21 +73,22 @@ export const ContentSection = () => {
             />
             <div className="lg:ml-8">
               <h2 className="text-2xl font-bold tracking-tight text-blue">
-                Déroulé d'un bilan
+                Déroulé d&apos;un bilan
               </h2>
               <p className="mt-6 text-base leading-7 text-gray-600">
-                Le bilan est un “état des lieux” de l'écriture : une observation
-                de l’écriture dans différentes situations, de la vitesse
-                d’écriture, de la tenue du stylo, de la posture, de la pression
-                et de la régularité du mouvement, ainsi que de tout ce qui est
-                nécessaire pour bien écrire. On évalue les problèmes spécifiques
-                et les causes possibles sous-jacentes comme la concentration, la
-                motricité fine ou la vision. Ce processus vise à identifier
-                précisément les difficultés d'écriture et à mettre en place des
-                stratégies efficaces pour les surmonter. Un petit plus : Le
-                bilan permet aussi de préconiser une aide spécifique pour
-                l’enfant à l’école, comme un plan d’accompagnement ou un tiers
-                temps pour les examens pour les plus grands.
+                Le bilan est un “état des lieux” de l&apos;écriture : une
+                observation de l’écriture dans différentes situations, de la
+                vitesse d’écriture, de la tenue du stylo, de la posture, de la
+                pression et de la régularité du mouvement, ainsi que de tout ce
+                qui est nécessaire pour bien écrire. On évalue les problèmes
+                spécifiques et les causes possibles sous-jacentes comme la
+                concentration, la motricité fine ou la vision. Ce processus vise
+                à identifier précisément les difficultés d&apos;écriture et à
+                mettre en place des stratégies efficaces pour les surmonter. Un
+                petit plus : Le bilan permet aussi de préconiser une aide
+                spécifique pour l’enfant à l’école, comme un plan
+                d’accompagnement ou un tiers temps pour les examens pour les
+                plus grands.
               </p>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm font-semibold leading-6 text-pink">

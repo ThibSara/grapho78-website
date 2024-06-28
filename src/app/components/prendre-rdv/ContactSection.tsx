@@ -18,8 +18,8 @@ export const ContactSection = () => {
                 <p className="mt-6">
                   Je consulte sur rendez-vous, au Chesnay (Yvelines). Pour
                   prendre rendez-vous ou obtenir davantage de renseignements,
-                  vous pouvez me joindre par téléphone, m'envoyer un SMS ou un
-                  email.
+                  vous pouvez me joindre par téléphone, m&apos;envoyer un SMS ou
+                  un email.
                 </p>
                 <dl className="mt-4 space-y-4 text-base leading-7">
                   <div className="flex gap-x-4">

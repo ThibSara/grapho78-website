@@ -8,7 +8,7 @@ export const CTASection = () => {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Envie de prendre RDV
             <br />
-            ou simplement d'en discuter ?
+            ou simplement d&apos;en discuter ?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
             Incididunt sint fugiat pariatur cupidatat consectetur sit cillum

@@ -13,7 +13,7 @@ export const ContentSection = () => {
                 La graphothérapie comme solution
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
-                La rééducation de l'écriture
+                La rééducation de l&apos;écriture
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
                 Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
@@ -45,15 +45,16 @@ export const ContentSection = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Des difficulté d'écriture.
+                      Des difficulté d&apos;écriture.
                       <br />
                     </strong>{" "}
                     Un enfant qui écrit mal, trop lentement ou avec difficulté
                     peut rencontrer des obstacles dans son parcours scolaire.
-                    Par exemple, s'il n'arrive pas à copier assez rapidement ses
-                    leçons ou s'il se pose encore la question de savoir comment
-                    former une lettre, il perd un temps précieux et peut se
-                    retrouver en difficulté face à ses camarades.
+                    Par exemple, s&apos;il n&apos;arrive pas à copier assez
+                    rapidement ses leçons ou s&apos;il se pose encore la
+                    question de savoir comment former une lettre, il perd un
+                    temps précieux et peut se retrouver en difficulté face à ses
+                    camarades.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -65,17 +66,17 @@ export const ContentSection = () => {
                     <strong className="font-semibold text-gray-900">
                       La graphothérapie comme solution. <br />
                     </strong>{" "}
-                    C'est là qu'intervient la graphothérapeute. Spécialiste de
-                    l'écriture, elle évalue les besoins spécifiques de chaque
-                    enfant et met en place des exercices personnalisés pour
-                    améliorer la fluidité, la lisibilité et la rapidité de
-                    l’écriture. Grâce à un suivi attentif et des techniques
-                    adaptées, la graphothérapeute aide l'enfant à acquérir une
-                    écriture plus efficace et plus agréable, ce qui peut
-                    significativement améliorer sa confiance en lui et sa
-                    performance scolaire. Les sessions de graphothérapie
+                    C&apos;est là qu&apos;intervient la graphothérapeute.
+                    Spécialiste de l&apos;écriture, elle évalue les besoins
+                    spécifiques de chaque enfant et met en place des exercices
+                    personnalisés pour améliorer la fluidité, la lisibilité et
+                    la rapidité de l’écriture. Grâce à un suivi attentif et des
+                    techniques adaptées, la graphothérapeute aide l&apos;enfant
+                    à acquérir une écriture plus efficace et plus agréable, ce
+                    qui peut significativement améliorer sa confiance en lui et
+                    sa performance scolaire. Les sessions de graphothérapie
                     incluent des activités ludiques et motivantes pour rendre
-                    l'apprentissage agréable.
+                    l&apos;apprentissage agréable.
                   </span>
                 </li>
                 <li className="flex gap-x-3">

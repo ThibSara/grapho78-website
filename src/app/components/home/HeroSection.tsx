@@ -39,9 +39,9 @@ export const HeroSection = () => {
             <p className="mt-6 text-lg leading-8 text-gray-700">
               La graphothérapie est une discipline qui vise à améliorer
               l’écriture, afin de la rendre plus lisible, rapide, soignée et
-              agréable. Cette pratique s'adresse principalement aux enfants et
-              aux adolescents dont l'écriture présente des difficultés, qu'elle
-              soit peu lisible ou négligée.
+              agréable. Cette pratique s&apos;adresse principalement aux enfants
+              et aux adolescents dont l&apos;écriture présente des difficultés,
+              qu&apos;elle soit peu lisible ou négligée.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <motion.div

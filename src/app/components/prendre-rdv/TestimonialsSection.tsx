@@ -37,7 +37,7 @@ export const TestimonialsSection = () => {
             <p className="my-4">
               Notre fille a suivi le stage de 5 séances pour améliorer son
               écriture. Les résultats ont dépassé nos attentes. Elle a même été
-              félicité par sa maitresse en fin d'année.
+              félicité par sa maitresse en fin d&apos;année.
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center ">
@@ -52,7 +52,7 @@ export const TestimonialsSection = () => {
         <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b hover:bg-gray-100 border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
           <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Professionnelle et à l'écoute
+              Professionnelle et à l&apos;écoute
             </h3>
             <p className="my-4">
               Merci pour votre professionnalisme et votre écoute. Vous avez su
@@ -74,10 +74,11 @@ export const TestimonialsSection = () => {
               Merci pour votre bienveillance !
             </h3>
             <p className="my-4">
-              Adulte et peu satisfaite de mon écriture depuis toujours, j'ai
-              consulté Sandrine Thibierge pour m'aider a travailler sur ce
-              complexe. Elle m'a apporté son point de vue en toute bienveillance
-              ce qui m'a permis de prendre confiance en moi !
+              Adulte et peu satisfaite de mon écriture depuis toujours,
+              j&apos;ai consulté Sandrine Thibierge pour m&apos;aider a
+              travailler sur ce complexe. Elle m&apos;a apporté son point de vue
+              en toute bienveillance ce qui m&apos;a permis de prendre confiance
+              en moi !
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center ">

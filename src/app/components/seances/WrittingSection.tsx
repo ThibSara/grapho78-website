@@ -41,7 +41,7 @@ export const WrittingSection = () => {
         <div className="mx-auto max-w-2xl text-center">
           <Spline scene="https://prod.spline.design/Sex97foPdsxHqnSy/scene.splinecode" />
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Voici des exemples d'écriture avant et après un accompagnement.
+            Voici des exemples d&apos;écriture avant et après un accompagnement.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
