@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"${urbanist.className} bg-white"}>
+      <body className={"${urbanist.className} bg-white "}>
         <NavBar />
         {children}
         <Footer />

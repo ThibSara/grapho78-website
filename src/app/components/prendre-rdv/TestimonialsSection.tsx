@@ -4,9 +4,9 @@ export const TestimonialsSection = () => {
   return (
     <main className="mx-auto max-w-7xl px-6 lg:px-8 mt-24">
       <div className="flex items-center justify-center py-8">
-        <p className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
-          Témoignages
-        </p>
+        <h2 className="text-2xl font-bold leading-10 tracking-tight text-blue">
+          Vos témoignages
+        </h2>
       </div>
       <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800 ">
         <figure className="flex flex-col items-center justify-center p-8 text-center bg-white hover:bg-gray-100 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">

@@ -86,10 +86,17 @@ export const HeroSection = () => {
               </h1>
               <div className="max-w-xl">
                 <p className="mt-6">
-                  Je suis membre de l’association de graphothérapie AGGE Label
-                  certifiant de l’Association pour une Graphothérapie Globale
-                  et Evolutive . Je fais partie de la fédération des
-                  graphothérapeutes Grafem.
+                  Je travaille activement à la GRAFEM, fédération des
+                  graphothérapeutes, en temps que membre du Conseil
+                  d’administration. La Grafem oeuvre pour garantir un haut
+                  niveau d&apos;éthique et de pratiques professionnelles de ses
+                  membres ainsi qu&apos;à la reconnaissance de notre métier.
+                </p>
+                <p className="mt-8">
+                  Je fais également partie du bureau de l&apos;AGGE, association
+                  de graphothérapie. Nous organisons des activités entre
+                  graphothérapeutes et proposons des conférences pour promouvoir
+                  et développer notre discipline.
                 </p>
                 <p className="mt-8">
                   Je me forme régulièrement afin de pouvoir aider au mieux les
