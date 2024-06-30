@@ -16,8 +16,8 @@ export const Footer = () => {
   const navigationSocial = [
     {
       name: "Facebook",
-      href: "#",
-      icon: (props) => (
+      href: "https://www.facebook.com/sandrine.thibierge",
+      icon: (props: any) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -30,7 +30,7 @@ export const Footer = () => {
     {
       name: "Instagram",
       href: "#",
-      icon: (props) => (
+      icon: (props: any) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -42,8 +42,8 @@ export const Footer = () => {
     },
     {
       name: "YouTube",
-      href: "#",
-      icon: (props) => (
+      href: "https://www.youtube.com/watch?v=BB6yUl0ShiU",
+      icon: (props: any) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
