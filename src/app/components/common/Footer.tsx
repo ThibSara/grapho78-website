@@ -1,24 +1,23 @@
 import React from "react";
+import PAGES_NAMES from "@/app/constants/PAGES_NAMES";
 
-interface NavigationItem {
-  name: string;
-  href: string;
-}
+export const Footer = () => {
+  const navigationMain = Object.values(PAGES_NAMES).map((page) => (
+    <div key={page.title} className="pb-6">
+      <a
+        href={page.href}
+        className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+      >
+        {page.title}
+      </a>
+    </div>
+  ));
 
-const navigation = {
-  main: [
-    { name: "Graphothérapie", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Accessibility", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
-  social: [
+  const navigationSocial = [
     {
       name: "Facebook",
       href: "#",
-      icon: (props: any) => (
+      icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -31,7 +30,7 @@ const navigation = {
     {
       name: "Instagram",
       href: "#",
-      icon: (props: any) => (
+      icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -44,7 +43,7 @@ const navigation = {
     {
       name: "YouTube",
       href: "#",
-      icon: (props: any) => (
+      icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -54,10 +53,8 @@ const navigation = {
         </svg>
       ),
     },
-  ],
-};
+  ];
 
-export const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
@@ -65,19 +62,10 @@ export const Footer = () => {
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
-          {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
-              <a
-                href={item.href}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            </div>
-          ))}
+          {navigationMain}
         </nav>
         <div className="mt-10 flex justify-center space-x-10">
-          {navigation.social.map((item) => (
+          {navigationSocial.map((item) => (
             <a
               key={item.name}
               href={item.href}
