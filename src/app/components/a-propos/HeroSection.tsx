@@ -1,22 +1,31 @@
+"use client";
 import React from "react";
 import Spline from "@splinetool/react-spline";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 const stats = [
   { label: "diplomée en", value: "2008" },
-  { label: "pratique", value: "16 ans" },
-  { label: "élèves", value: "+1000" },
+  { label: "pratique", value: "16", postfix: " ans" },
+  { label: "élèves", value: "1000", prefix: "+" },
 ];
+
+const AnimatedNumbers = dynamic(
+  () => {
+    return import("react-animated-numbers");
+  },
+  { ssr: false }
+);
 
 export const HeroSection = () => {
   return (
-    <div className="bg-white py-10 ">
+    <div className="bg-white py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* about me content */}
         <div className="items-center justify-center min-h-screen flex">
-          <div className=" mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
-              <div className="relative overflow-hidden rounded-3xl  w-full h-auto lg:h-[500px]">
+              <div className="relative overflow-hidden rounded-3xl w-full h-auto lg:h-[500px]">
                 <div className="absolute inset-0 z-0">
                   <Image
                     src="/images/grid.png"
@@ -29,7 +38,7 @@ export const HeroSection = () => {
 
                 <Spline
                   scene="https://prod.spline.design/SNniUrXIrTCv2qHa/scene.splinecode"
-                  className=" relative z-10 w-full h-full"
+                  className="relative z-10 w-full h-full"
                 />
               </div>
             </div>
@@ -44,7 +53,7 @@ export const HeroSection = () => {
                 <div className="max-w-xl">
                   <p className="mt-6">
                     Je suis graphothérapeute, installée au Chesnay. Passionnée
-                    par la caligraphie, l’écriture, l’encre, je rééduque
+                    par la calligraphie, l’écriture, l’encre, je rééduque
                     l’écriture et le geste graphique chez les enfants et les
                     adolescents depuis 2010. Je les aide à améliorer leur
                     écriture et j’en profite pour leur transmettre ma passion
@@ -62,15 +71,30 @@ export const HeroSection = () => {
                   </p>
                 </div>
               </div>
-              <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
+              <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-3">
                 {stats.map((stat, statIdx) => (
-                  <div key={statIdx}>
+                  <div key={statIdx} className="flex flex-col items-start">
                     <dt className="text-sm font-semibold leading-6 text-gray-600">
                       {stat.label}
                     </dt>
-                    <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900">
-                      {stat.value}
-                    </dd>
+                    <div className="flex items-baseline">
+                      {stat.prefix && (
+                        <span className="text-sm font-bold leading-6">
+                          {stat.prefix}
+                        </span>
+                      )}
+                      <dd className="text-4xl font-bold leading-10 tracking-tight text-gray-900">
+                        <AnimatedNumbers
+                          animateToNumber={parseInt(stat.value)}
+                          locale="en-US"
+                        />
+                      </dd>
+                      {stat.postfix && (
+                        <span className="text-sm font-bold leading-6">
+                          {stat.postfix}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 ))}
               </dl>
@@ -87,7 +111,7 @@ export const HeroSection = () => {
               <div className="max-w-xl">
                 <p className="mt-6">
                   Je travaille activement à la GRAFEM, fédération des
-                  graphothérapeutes, en temps que membre du Conseil
+                  graphothérapeutes, en tant que membre du Conseil
                   d’administration. La Grafem oeuvre pour garantir un haut
                   niveau d&apos;éthique et de pratiques professionnelles de ses
                   membres ainsi qu&apos;à la reconnaissance de notre métier.
@@ -105,8 +129,7 @@ export const HeroSection = () => {
                   , L’écriture avec Nicole Fraselle, Les Reflexes Archaïques, La
                   Posturologie, Les neurosciences avec Tatiana de Barelli … et
                   je suis co-créatrice des sous-main en plastique
-                  éco-responsable pour une méthode de ré-éducation de
-                  l’écriture.
+                  éco-responsable pour une méthode de rééducation de l’écriture.
                 </p>
               </div>
             </div>
