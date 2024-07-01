@@ -45,7 +45,7 @@ export const ContentSection = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Des difficulté d&apos;écriture.
+                      Des difficulté d&apos;écriture
                       <br />
                     </strong>{" "}
                     Un enfant qui écrit mal, trop lentement ou avec difficulté
@@ -64,7 +64,7 @@ export const ContentSection = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      La graphothérapie comme solution. <br />
+                      La graphothérapie comme solution <br />
                     </strong>{" "}
                     C&apos;est là qu&apos;intervient la graphothérapeute.
                     Spécialiste de l&apos;écriture, elle évalue les besoins
@@ -86,7 +86,7 @@ export const ContentSection = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Un petit plus. <br />
+                      Le petit plus <br />
                     </strong>{" "}
                     La graphothérapie ne se limite pas à corriger l’écriture;
                     elle vise aussi à améliorer la posture, renforcer la
