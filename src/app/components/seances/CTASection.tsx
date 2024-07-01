@@ -3,7 +3,7 @@ import PAGES_NAMES from "@/app/constants/PAGES_NAMES";
 
 export const CTASection = () => {
   return (
-    <div className="relative">
+    <div className="relative pt-24">
       <div
         className="absolute inset-x-0 top-0 h-full -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"

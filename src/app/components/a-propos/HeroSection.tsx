@@ -52,22 +52,22 @@ export const HeroSection = () => {
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-6">
-                    Je suis graphothérapeute, installée au Chesnay. Passionnée
-                    par la calligraphie, l’écriture, l’encre, je rééduque
-                    l’écriture et le geste graphique chez les enfants et les
-                    adolescents depuis 2010. Je les aide à améliorer leur
-                    écriture et j’en profite pour leur transmettre ma passion
-                    pour l’écriture au sens le plus général du terme.
+                    Je suis graphothérapeute, installée au Chesnay, et
+                    passionnée par la calligraphie, l&apos;écriture et l’encre.
+                    Depuis 2008, je rééduque l&apos;écriture et le geste
+                    graphique des enfants et des adolescents, les aidant à
+                    améliorer leur écriture tout en leur transmettant ma passion
+                    pour l&apos;art de l&apos;écriture sous toutes ses formes.
                   </p>
                   <p className="mt-8">
-                    Après avoir travaillé pendant 15 ans en entreprise en tant
-                    qu’ingénieur dans les télécoms, j’ai changé d’orientation à
-                    la naissance de mon troisième enfant. Afin d’aider mon
-                    fils dyslexique, j’ai découvert les métiers autour des
-                    enfants pour les aider dans leurs apprentissages. J’ai
-                    repris des études en psychologie, caractérologie et
-                    graphologie, et je suis devenue Graphothérapeute depuis
-                    2008.
+                    Avant de me reconvertir, j&apos;ai travaillé pendant 15 ans
+                    en tant qu&apos;ingénieur dans le domaine des télécoms. La
+                    naissance de mon troisième enfant a été le déclencheur de ce
+                    changement de carrière. Pour aider mon fils dyslexique, je
+                    me suis intéressée aux métiers dédiés à
+                    l&apos;accompagnement des enfants dans leurs apprentissages.
+                    J&apos;ai repris des études en psychologie, caractérologie
+                    et graphologie.
                   </p>
                 </div>
               </div>

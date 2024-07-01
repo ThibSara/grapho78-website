@@ -3,58 +3,65 @@ import React from "react";
 const faqs = [
   {
     id: 1,
-    question: "How do you make holy water?",
+    question: "Quand faut-il consulter un spécialiste ?",
     answer:
-      "You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Il est recommandé de consulter lorsque les enseignants expriment des préoccupations, lorsque l’écriture de l’enfant est peu lisible, trop lente, lorsqu'il ressent des douleurs en écrivant ou refuse d’écrire.",
   },
   {
     id: 2,
-    question: "What do you call a belt made of watches?",
+    question: "Combien de temps dure la rééducation ?",
     answer:
-      "A waist of time. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "La durée de la rééducation varie en fonction des enfants et de leurs difficultés spécifiques. Cependant, dans de nombreux cas, quelques séances peuvent suffire.",
   },
   {
     id: 3,
-    question: "Why can't you hear a pterodactyl go to the bathroom?",
+    question: "Pourquoi est-il important de faire un bilan ?",
     answer:
-      "Because the pee is silent. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Un bilan permet d'évaluer précisément les difficultés de l’enfant et de déterminer les meilleures stratégies pour y remédier.",
   },
   {
     id: 4,
-    question: "Why couldn't the bicycle find its way home?",
+    question: "Quels sont les signes de difficultés en écriture ?",
     answer:
-      "It lost its bearings. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Les signes peuvent inclure une écriture illisible, lente, des douleurs pendant l'écriture, ou un refus d'écrire. Ces signes justifient une évaluation approfondie.",
   },
   {
     id: 5,
-    question: "What do you call a fish wearing a crown?",
+    question: "Quelle est la fréquence des séances de rééducation ?",
     answer:
-      "A king fish. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "La fréquence des séances varie selon les besoins de l'enfant. Elle est généralement déterminée lors du bilan initial et ajustée en fonction des progrès observés.",
   },
 ];
-
 export const FAQSection = () => {
   return (
-    <div>
-      <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-        <h2 className="text-2xl font-bold leading-10 tracking-tight text-blue items-center flex justify-center">
-          Vos questions les plus fréquentes
-        </h2>
-        <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
-          {faqs.map((faq) => (
-            <div key={faq.id} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-              <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-                {faq.question}
-              </dt>
-              <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                <p className="text-base leading-7 text-gray-600">
-                  {faq.answer}
-                </p>
-              </dd>
-            </div>
-          ))}
-        </dl>
+    <div className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-8 mx-auto max-w-7xl">
+      <h2 className="text-2xl font-bold tracking-tight text-blue-600 text-center mb-12">
+        Vos questions les plus fréquentes
+      </h2>
+      <div
+        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-[-3rem] aspect-[1155/678] w-[20rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[-6rem] sm:w-[40rem]"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
       </div>
+      <dl className="mt-10 space-y-8 divide-y divide-gray-300">
+        {faqs.map((faq) => (
+          <div key={faq.id} className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+            <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
+              {faq.question}
+            </dt>
+            <dd className="mt-4 lg:col-span-7 lg:mt-0">
+              <p className="text-base leading-7 text-gray-600">{faq.answer}</p>
+            </dd>
+          </div>
+        ))}
+      </dl>
     </div>
   );
 };
