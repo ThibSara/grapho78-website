@@ -56,8 +56,8 @@ export const WrittingSection = () => {
             Améliorer son écriture
           </h1>
           <p className="mt-6 text-xl leading-8 text-gray-700">
-            Voici des exemples d'écritures avant et après quelques séances de
-            graphothérapie.
+            Voici des exemples d&apos;écritures avant et après quelques séances
+            de graphothérapie.
           </p>
 
           {/*<div className="flex justify-center mt-8">
