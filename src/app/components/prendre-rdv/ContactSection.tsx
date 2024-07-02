@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, House } from "lucide-react";
+import Image from "next/image";
 
 export const ContactSection = () => {
   return (
@@ -17,7 +18,7 @@ export const ContactSection = () => {
         />
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div>
             <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-pink">
@@ -91,8 +92,26 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
-          <div className="lg:pr-4">
-            <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10"></div>
+          <div className="lg:pr-4 flex justify-center lg:justify-end">
+            <div className="lg:flex-1 lg:mt-8 lg:self-start items-center">
+              <img
+                src="/images/sandrine-thibierge.png"
+                alt=""
+                className="aspect-[7/5] w-[20rem] mt-8 lg:mt-0 lg:w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+              />
+              <div className="flex">
+                <img
+                  src="/images/seances/2.jpg"
+                  alt=""
+                  className="aspect-[4/3] w-[12rem]  lg:w-[16rem] mt-5  max-w-none flex-none rounded-2xl bg-gray-50 object-cover hidden sm:block"
+                />
+                <img
+                  src="/images/seances/7.jpg"
+                  alt=""
+                  className="aspect-[4/3] w-[20rem] lg:w-[16rem] mt-5  sm:ml-5 ml-0 max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
