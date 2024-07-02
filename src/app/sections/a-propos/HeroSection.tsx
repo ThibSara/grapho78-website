@@ -136,19 +136,24 @@ export const HeroSection = () => {
           </div>
           <div className="lg:pr-4">
             <div className="relative overflow-hidden px-6 pb-9 pt-10 flex flex-col items-center sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+              <DotPattern
+                className={cn(
+                  "[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                )}
+              />
               <Image
                 src="/images/agge-logo.png"
                 alt="Associations"
                 width={200}
                 height={200}
-                className="mb-5"
+                className=" relative z-10 mb-5"
               />
               <Image
                 src="/images/grafem-logo.png"
                 alt="Associations"
                 width={250}
                 height={250}
-                className="mt-5"
+                className="relative z-10 mt-5"
               />
             </div>
           </div>

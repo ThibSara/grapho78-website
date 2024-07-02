@@ -4,6 +4,7 @@ import { ImageSlider } from "./ImageSlider";
 
 const childrens = [
   {
+    key: 1,
     title: "Léa",
     imageUrlBefore: "/images/before-after/lea/before.png",
     imageUrlAfter: "/images/before-after/lea/after.png",
@@ -12,6 +13,7 @@ const childrens = [
     caption: "Avant après 4 séances.",
   },
   {
+    key: 2,
     title: "Thomas",
     imageUrlBefore: "/images/before-after/thomas/before.png",
     imageUrlAfter: "/images/before-after/thomas/after.png",
@@ -53,6 +55,7 @@ export const WrittingSection = () => {
         <div className="mx-auto mt-12 grid gap-8 sm:mt-14 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {childrens.map((children) => (
             <ImageSlider
+              key={children.key}
               beforeImg={children.imageUrlBefore}
               afterImg={children.imageUrlAfter}
               name={children.title}
