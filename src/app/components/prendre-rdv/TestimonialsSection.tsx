@@ -8,10 +8,10 @@ export const TestimonialsSection = () => {
           Vos témoignages
         </h2>
       </div>
-      <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800 ">
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white hover:bg-gray-100 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+      <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm  md:mb-12 md:grid-cols-2 bg-white">
+        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white hover:bg-gray-100 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e ">
+          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+            <h3 className="text-lg font-semibold text-gray-900 ">
               Je recommande !
             </h3>
             <p className="my-4">
@@ -21,17 +21,15 @@ export const TestimonialsSection = () => {
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center ">
-            <div className="space-y-0.5 font-medium dark:text-white text-center rtl:text-right ms-3">
+            <div className="space-y-0.5 font-medium  text-center rtl:text-right ms-3">
               <div>Marie D.</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400 ">
-                mère de Louis 8 ans
-              </div>
+              <div className="text-sm text-gray-500  ">mère de Louis 8 ans</div>
             </div>
           </figcaption>
         </figure>
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white hover:bg-gray-100 border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white hover:bg-gray-100 border-b border-gray-200 md:rounded-se-lg">
+          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+            <h3 className="text-lg font-semibold text-gray-900 ">
               Un grand merci !
             </h3>
             <p className="my-4">
@@ -41,17 +39,15 @@ export const TestimonialsSection = () => {
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center ">
-            <div className="space-y-0.5 font-medium dark:text-white text-center rtl:text-right ms-3">
+            <div className="space-y-0.5 font-medium  text-center rtl:text-right ms-3">
               <div>Caroline P.</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">
-                mère de Léa 10 ans
-              </div>
+              <div className="text-sm text-gray-500 ">mère de Léa 10 ans</div>
             </div>
           </figcaption>
         </figure>
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b hover:bg-gray-100 border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b hover:bg-gray-100 border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e ">
+          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+            <h3 className="text-lg font-semibold text-gray-900 ">
               Professionnelle et à l&apos;écoute
             </h3>
             <p className="my-4">
@@ -60,17 +56,17 @@ export const TestimonialsSection = () => {
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center ">
-            <div className="space-y-0.5 font-medium dark:text-white text-center rtl:text-right ms-3">
+            <div className="space-y-0.5 font-medium  text-center rtl:text-right ms-3">
               <div>Tierry G.</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">
+              <div className="text-sm text-gray-500 ">
                 père de Thomas 12 ans
               </div>
             </div>
           </figcaption>
         </figure>
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 hover:bg-gray-100 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 hover:bg-gray-100 rounded-b-lg md:rounded-se-lg ">
+          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+            <h3 className="text-lg font-semibold text-gray-900 ">
               Merci pour votre bienveillance !
             </h3>
             <p className="my-4">
@@ -82,11 +78,9 @@ export const TestimonialsSection = () => {
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center ">
-            <div className="space-y-0.5 font-medium dark:text-white text-center rtl:text-right ms-3">
+            <div className="space-y-0.5 font-medium  text-center rtl:text-right ms-3">
               <div>Tessa S.</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">
-                26 ans{" "}
-              </div>
+              <div className="text-sm text-gray-500 ">26 ans </div>
             </div>
           </figcaption>
         </figure>
