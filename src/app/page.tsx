@@ -1,9 +1,9 @@
 "use client";
-import { NavBar } from "./components/common/NavBar";
-import { HeroSection } from "./components/home/HeroSection";
-import { ContentSection } from "./components/home/ContentSection";
-import { BlogSection } from "./components/common/BlogSection";
-import { CTASection } from "./components/home/CTASection";
+import { NavBar } from "./sections/common/NavBar";
+import { HeroSection } from "./sections/home/HeroSection";
+import { ContentSection } from "./sections/home/ContentSection";
+import { BlogSection } from "./sections/common/BlogSection";
+import { CTASection } from "./sections/home/CTASection";
 import { motion } from "framer-motion";
 
 export default function Home() {

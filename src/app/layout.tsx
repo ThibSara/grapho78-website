@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "./components/common/NavBar";
-import { Footer } from "./components/common/Footer";
-import { Cursor } from "./components/common/cursor/Cursor";
+import { NavBar } from "./sections/common/NavBar";
+import { Footer } from "./sections/common/Footer";
+import { Cursor } from "./sections/common/cursor/Cursor";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 

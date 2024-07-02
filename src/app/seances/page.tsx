@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
-import { WrittingSection } from "../components/seances/WrittingSection";
-import { CTASection } from "../components/seances/CTASection";
-import { BilanSection } from "../components/seances/BilanSection";
-import { SeancesSection } from "../components/seances/SeancesSections";
+import { WrittingSection } from "../sections/seances/WrittingSection";
+import { CTASection } from "../sections/seances/CTASection";
+import { BilanSection } from "../sections/seances/BilanSection";
+import { SeancesSection } from "../sections/seances/SeancesSections";
 
 export default function page() {
   return (

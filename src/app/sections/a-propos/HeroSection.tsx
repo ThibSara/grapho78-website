@@ -3,6 +3,8 @@ import React from "react";
 import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { cn } from "@/app/lib/utils";
+import DotPattern from "@/app/components/magicui/dot-pattern";
 
 const stats = [
   { label: "diplomée en", value: "2008" },
@@ -27,12 +29,10 @@ export const HeroSection = () => {
             <div className="lg:pr-4">
               <div className="relative overflow-hidden rounded-3xl w-full h-auto lg:h-[500px]">
                 <div className="absolute inset-0 z-0">
-                  <Image
-                    src="/images/grid.png"
-                    alt="Grid background"
-                    layout="fill"
-                    objectFit="cover"
-                    className="pointer-events-none"
+                  <DotPattern
+                    className={cn(
+                      "[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                    )}
                   />
                 </div>
 

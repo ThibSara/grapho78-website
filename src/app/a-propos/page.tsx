@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { HeroSection } from "../components/a-propos/HeroSection";
-import { BlogSection } from "../components/common/BlogSection";
+import { HeroSection } from "../sections/a-propos/HeroSection";
+import { BlogSection } from "../sections/common/BlogSection";
 import { motion } from "framer-motion";
 
 export default function page() {

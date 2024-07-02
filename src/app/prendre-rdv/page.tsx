@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { TestimonialsSection } from "../components/prendre-rdv/TestimonialsSection";
-import { ContactSection } from "../components/prendre-rdv/ContactSection";
-import { FAQSection } from "../components/prendre-rdv/FAQSection";
+import { TestimonialsSection } from "../sections/prendre-rdv/TestimonialsSection";
+import { ContactSection } from "../sections/prendre-rdv/ContactSection";
+import { FAQSection } from "../sections/prendre-rdv/FAQSection";
 import { motion } from "framer-motion";
 
 export default function page() {

@@ -1,37 +1,23 @@
 import React from "react";
-import Spline from "@splinetool/react-spline";
-import Card from "./Card"; // Make sure the path is correct based on your file structure
+import Card from "./Card";
+import { ImageSlider } from "./ImageSlider";
 
 const childrens = [
   {
-    id: 1,
     title: "Léa",
-    href: "#",
     imageUrlBefore: "/images/before-after/lea/before.png",
     imageUrlAfter: "/images/before-after/lea/after.png",
     age: "8 ans",
-    class: "CE1",
-    state: "Avant",
+    grade: "CE1",
+    caption: "Avant après 4 séances.",
   },
   {
-    id: 2,
     title: "Thomas",
-    href: "#",
     imageUrlBefore: "/images/before-after/thomas/before.png",
     imageUrlAfter: "/images/before-after/thomas/after.png",
     age: "13 ans",
-    class: "5e",
-    state: "Avant",
-  },
-  {
-    id: 3,
-    title: "Valentin",
-    href: "#",
-    imageUrlBefore: "/images/before-after/lea/before.png",
-    imageUrlAfter: "/images/before-after/lea/after.png",
-    age: "16 ans",
-    class: "2nd",
-    state: "Avant",
+    grade: "5ème",
+    caption: "Avant après 7 séances.",
   },
 ];
 
@@ -43,7 +29,7 @@ export const WrittingSection = () => {
         aria-hidden="true"
       >
         <div
-          className="relative right-0 top-0 aspect-[1155/678] w-[18.0625rem] translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:w-[36.09375rem]"
+          className="relative right-0 top-0 aspect-[1155/678] w-[18.0625rem] translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#ff80b5] opacity-40 sm:w-[36.09375rem]"
           style={{
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -64,15 +50,15 @@ export const WrittingSection = () => {
             <Spline scene="https://prod.spline.design/Sex97foPdsxHqnSy/scene.splinecode" />
           </div>*/}
         </div>
-        <div className="mx-auto mt-12 grid gap-8 sm:mt-14 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid gap-8 sm:mt-14 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {childrens.map((children) => (
-            <Card
-              key={children.id}
+            <ImageSlider
               beforeImg={children.imageUrlBefore}
               afterImg={children.imageUrlAfter}
               name={children.title}
               age={children.age}
-              grade={children.class}
+              grade={children.grade}
+              caption={children.caption}
             />
           ))}
         </div>
