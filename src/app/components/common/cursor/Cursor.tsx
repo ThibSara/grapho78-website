@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import styles from "./style.module.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export default function Index() {
+export const Cursor = () => {
   const cursorSize = 15;
 
   const mouse = {
@@ -43,4 +43,4 @@ export default function Index() {
       ></motion.div>
     </div>
   );
-}
+};
