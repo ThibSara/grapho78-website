@@ -21,7 +21,7 @@ const AnimatedNumbers = dynamic(
 
 export const HeroSection = () => {
   return (
-    <div className="bg-white py-10">
+    <div className="py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* about me content */}
         <div className="items-center justify-center min-h-screen flex">
@@ -102,12 +102,22 @@ export const HeroSection = () => {
           </div>
         </div>
         {/* about my associations content */}
+
         <div className="mx-auto mt-24 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div>
             <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
                 Mes associations
               </h1>
+              <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                <div
+                  className="relative left-[-3rem] aspect-[1155/678] w-[20rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[-6rem] sm:w-[40rem]"
+                  style={{
+                    clipPath:
+                      "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                  }}
+                />
+              </div>
               <div className="max-w-xl">
                 <p className="mt-6">
                   Je travaille activement à la GRAFEM, fédération des

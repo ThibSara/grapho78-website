@@ -21,6 +21,15 @@ const childrens = [
     grade: "5ème",
     caption: "Avant après 7 séances.",
   },
+  {
+    key: 3,
+    title: "Lucas",
+    imageUrlBefore: "/images/before-after/thomas/before.png",
+    imageUrlAfter: "/images/before-after/thomas/after.png",
+    age: "13 ans",
+    grade: "5ème",
+    caption: "Avant après 7 séances.",
+  },
 ];
 
 export const WrittingSection = () => {
@@ -52,7 +61,7 @@ export const WrittingSection = () => {
             <Spline scene="https://prod.spline.design/Sex97foPdsxHqnSy/scene.splinecode" />
           </div>*/}
         </div>
-        <div className="mx-auto mt-12 grid gap-8 sm:mt-14 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto mt-12 grid gap-8 sm:mt-14 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {childrens.map((children) => (
             <ImageSlider
               key={children.key}

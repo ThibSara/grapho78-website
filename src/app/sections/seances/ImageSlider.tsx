@@ -32,13 +32,13 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
   };
 
   return (
-    <main className="grid place-items-center  ">
+    <div className="grid place-items-center">
       <div
         className="relative grid place-content-center overflow-hidden rounded-xl"
         style={{ "--position": `${position}%` } as React.CSSProperties}
         onMouseMove={handleMouseMove}
       >
-        <div className="relative w-[500px] h-[350px] max-h-[90vh]">
+        <div className="relative w-[370px] h-[300px] max-h-[90vh]">
           <img
             className="absolute inset-0 w-[var(--position)] h-full object-cover object-left filter grayscale"
             src={beforeImg}
@@ -96,6 +96,6 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
           </p>
         </div>
       </div>
-    </main>
+    </div>
   );
 };

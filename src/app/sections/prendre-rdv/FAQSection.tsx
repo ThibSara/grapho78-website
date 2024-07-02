@@ -5,7 +5,7 @@ const faqs = [
     id: 1,
     question: "Quand faut-il consulter un spécialiste ?",
     answer:
-      "Il est recommandé de consulter lorsque les enseignants expriment des préoccupations, lorsque l’écriture de l’enfant est peu lisible, trop lente, lorsqu&apos;il ressent des douleurs en écrivant ou refuse d’écrire.",
+      "Il est recommandé de consulter lorsque les enseignants expriment des préoccupations, lorsque l’écriture de l’enfant est peu lisible, trop lente, lorsqu'il ressent des douleurs en écrivant ou refuse d’écrire.",
   },
   {
     id: 2,
@@ -17,25 +17,25 @@ const faqs = [
     id: 3,
     question: "Pourquoi est-il important de faire un bilan ?",
     answer:
-      "Un bilan permet d&apos;évaluer précisément les difficultés de l’enfant et de déterminer les meilleures stratégies pour y remédier.",
+      "Un bilan permet d'évaluer précisément les difficultés de l’enfant et de déterminer les meilleures stratégies pour y remédier.",
   },
   {
     id: 4,
     question: "Quels sont les signes de difficultés en écriture ?",
     answer:
-      "Les signes peuvent inclure une écriture illisible, lente, des douleurs pendant l&apos;écriture, ou un refus d&apos;écrire. Ces signes justifient une évaluation approfondie.",
+      "Les signes peuvent inclure une écriture illisible, lente, des douleurs pendant l'écriture, ou un refus d'écrire. Ces signes justifient une évaluation approfondie.",
   },
   {
     id: 5,
     question: "Quelle est la fréquence des séances de rééducation ?",
     answer:
-      "La fréquence des séances varie selon les besoins de l&apos;enfant. Elle est généralement déterminée lors du bilan initial et ajustée en fonction des progrès observés.",
+      "La fréquence des séances varie selon les besoins de l'enfant. Elle est généralement déterminée lors du bilan initial et ajustée en fonction des progrès observés.",
   },
 ];
 export const FAQSection = () => {
   return (
     <div className="relative py-24 sm:py-24 lg:py-40 px-6 lg:px-8 mx-auto max-w-7xl">
-      <h2 className="text-2xl font-bold tracking-tight text-blue-600 text-center mb-12">
+      <h2 className="text-2xl font-bold tracking-tight text-blue text-center mb-12">
         Vos questions les plus fréquentes
       </h2>
       <div
