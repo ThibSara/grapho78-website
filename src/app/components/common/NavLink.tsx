@@ -12,7 +12,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, title, active, onClick }) => {
   const isRDV = title === "Prendre RDV";
 
   const rdvButton = isRDV
-    ? "bg-blue text-white px-4 rounded-3xl hover:text-white hover:bg-secondary"
+    ? "bg-blue text-white px-4 rounded-3xl hover:text-slate-200"
     : "";
 
   return (

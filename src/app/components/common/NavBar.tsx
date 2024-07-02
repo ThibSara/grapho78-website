@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import PAGES_NAMES from "@/app/constants/PAGES_NAMES";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: PAGES_NAMES.HOME.title, href: PAGES_NAMES.HOME.href },
@@ -15,7 +16,11 @@ const navigation = [
 
 export const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("/");
+  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState(pathname);
+  useEffect(() => {
+    setActiveLink(pathname);
+  }, [pathname]);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
