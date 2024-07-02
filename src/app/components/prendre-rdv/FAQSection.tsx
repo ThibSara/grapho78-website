@@ -34,7 +34,7 @@ const faqs = [
 ];
 export const FAQSection = () => {
   return (
-    <div className="relative py-24 sm:py-32 lg:py-40 px-6 lg:px-8 mx-auto max-w-7xl">
+    <div className="relative py-24 sm:py-24 lg:py-40 px-6 lg:px-8 mx-auto max-w-7xl">
       <h2 className="text-2xl font-bold tracking-tight text-blue-600 text-center mb-12">
         Vos questions les plus fréquentes
       </h2>

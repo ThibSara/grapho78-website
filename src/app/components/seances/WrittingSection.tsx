@@ -55,7 +55,7 @@ export const WrittingSection = () => {
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
             Améliorer son écriture
           </h1>
-          <p className="mt-6 text-xl leading-8 text-gray-700">
+          <p className="mt-6 text-lg leading-8 text-gray-700">
             Voici des exemples d&apos;écritures avant et après quelques séances
             de graphothérapie.
           </p>

@@ -135,18 +135,20 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="lg:pr-4">
-            <div className="relative overflow-hidden px-6 pb-9 pt-10 flex sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 items-center">
+            <div className="relative overflow-hidden px-6 pb-9 pt-10 flex flex-col items-center sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
               <Image
                 src="/images/agge-logo.png"
                 alt="Associations"
                 width={200}
                 height={200}
+                className="mb-5"
               />
               <Image
                 src="/images/grafem-logo.png"
                 alt="Associations"
                 width={250}
                 height={250}
+                className="mt-5"
               />
             </div>
           </div>

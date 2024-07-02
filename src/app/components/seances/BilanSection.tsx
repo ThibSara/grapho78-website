@@ -18,15 +18,15 @@ export const BilanSection = () => {
         />
       </div>
 
-      <div className="lg:sticky lg:top-4 lg:self-start">
+      <div className="lg:sticky lg:top-4 lg:self-start lg:block hidden">
         <img
           src="/images/seances/1.jpg"
           alt=""
           className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
         />
       </div>
-      <div className="lg:flex lg:items-start lg:gap-x-12">
-        <div className="lg:ml-8">
+      <div className="lg:flex lg:items-start lg:gap-x-12 ">
+        <div className="lg:ml-8 mt-10 lg:mt-0">
           <h2 className="text-2xl font-bold tracking-tight text-blue">
             Déroulé d&apos;un bilan
           </h2>
@@ -58,6 +58,13 @@ export const BilanSection = () => {
             <span className="text-sm font-semibold leading-6 text-pink">
               120 à 150€
             </span>
+          </div>
+          <div className="lg:sticky mt-8 lg:top-4 lg:self-start  lg:hidden items-center flex justify-center">
+            <img
+              src="/images/seances/1.jpg"
+              alt=""
+              className="aspect-[7/5] w-full max-w-[37rem] rounded-2xl bg-gray-50 object-cover"
+            />
           </div>
         </div>
       </div>

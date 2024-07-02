@@ -18,7 +18,7 @@ export const CTASection = () => {
       </div>
       <div className="px-6 py-24 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-2xl text-center py-12 px-16 bg-white rounded-xl shadow-sm">
-          <h2 className="text-3xl font-bold tracking-tight text-blue sm:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight text-blue lg:text-3xl">
             Envie de prendre RDV ou simplement d&apos;en discuter ?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-700">

@@ -13,13 +13,8 @@ export const ContentSection = () => {
                 La graphothérapie comme solution
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
-                La rééducation de l&apos;écriture
+                L&apos;écriture
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas.
-              </p>
             </div>
           </div>
         </div>
@@ -30,12 +25,21 @@ export const ContentSection = () => {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
+                <strong>
+                  Apprendre à écrire suit plusieurs étapes essentielles
+                </strong>
+                , débutant dès le plus jeune âge avec le développement de la
+                motricité fine à travers des activités manuelles comme le
+                coloriage et le découpage.
+                <br /> Par la suite, l’enfant apprend à reconnaître les lettres
+                et à faire le lien entre les lettres et les sons. Il commence à
+                écrire les lettres en majuscules, car elles sont plus grandes et
+                plus faciles à maîtriser, avant de passer aux minuscules.
+                <br /> À l’école, il combine les lettres pour former des mots,
+                puis des phrases, s’entraînant régulièrement pour améliorer ses
+                compétences. Ces étapes progressives, soutenues par des
+                exercices pratiques et constants, permettent de maîtriser
+                l&apos;écriture de manière efficace.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
@@ -45,16 +49,16 @@ export const ContentSection = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Des difficulté d&apos;écriture
+                      Des difficultés d&apos;écriture
                       <br />
                     </strong>{" "}
-                    Un enfant qui écrit mal, trop lentement ou avec difficulté
-                    peut rencontrer des obstacles dans son parcours scolaire.
-                    Par exemple, s&apos;il n&apos;arrive pas à copier assez
-                    rapidement ses leçons ou s&apos;il se pose encore la
+                    Un enfant qui écrit mal, trop lentement ou avec difficulté,
+                    dont l’écriture n’est pas conforme à l’âge et à ses
+                    possibilités peut rencontrer des obstacles dans son parcours
+                    scolaire. Par exemple, s&apos;il n&apos;arrive pas à copier
+                    assez rapidement ses leçons ou s&apos;il se pose encore la
                     question de savoir comment former une lettre, il perd un
-                    temps précieux et peut se retrouver en difficulté face à ses
-                    camarades.
+                    temps précieux et peut se retrouver en difficulté.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -108,13 +112,6 @@ export const ContentSection = () => {
                   }}
                 />
               </div>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
-                et ut. Ac lorem vel integer orci.
-              </p>
             </div>
           </div>
         </div>
