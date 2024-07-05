@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Phone, House } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Suspense } from "react";
+
+import Image from "next/image";
 
 export const ContactSection = () => {
   return (

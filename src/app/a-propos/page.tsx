@@ -1,13 +1,58 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HeroSection } from "../sections/a-propos/HeroSection";
 import { BlogSection } from "../sections/common/BlogSection";
 import { motion } from "framer-motion";
 import { reqUrl } from "@/app/config";
 
-export default async function Page() {
-  const req = await fetch(`${reqUrl}posts?_fields=id,slug,title,date,content`);
-  const blogPosts = await req.json();
+interface BlogPost {
+  id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+  date: string;
+  content: {
+    rendered: string;
+  };
+}
+
+const Page: React.FC = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const req = await fetch(
+          `${reqUrl}posts?_fields=id,slug,title,date,content`,
+          {
+            cache: "force-cache",
+          }
+        );
+        if (!req.ok) {
+          throw new Error("Failed to fetch");
+        }
+        const blogPosts: BlogPost[] = await req.json();
+        setBlogPosts(blogPosts);
+      } catch (error: any) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <motion.div
@@ -19,4 +64,6 @@ export default async function Page() {
       <BlogSection blogPosts={blogPosts} />
     </motion.div>
   );
-}
+};
+
+export default Page;

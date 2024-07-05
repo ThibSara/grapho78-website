@@ -40,12 +40,12 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
       >
         <div className="relative w-[370px] h-[300px] max-h-[90vh] border border-gray-300 rounded-xl">
           <img
-            className="absolute inset-0 w-[var(--position)] h-full object-cover object-left filter grayscale rounded-xl"
+            className="absolute inset-0 w-[var(--position)] h-full object-cover object-left filter grayscale rounded-l-xl "
             src={beforeImg}
             alt="before photo"
           />
           <img
-            className="w-full h-full object-cover object-left rounded-xl"
+            className="w-full h-full object-cover object-left rounded-r-xl "
             src={afterImg}
             alt="after photo"
           />
