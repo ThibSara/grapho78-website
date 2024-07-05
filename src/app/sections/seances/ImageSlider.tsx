@@ -38,14 +38,14 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
         style={{ "--position": `${position}%` } as React.CSSProperties}
         onMouseMove={handleMouseMove}
       >
-        <div className="relative w-[370px] h-[300px] max-h-[90vh]">
+        <div className="relative w-[370px] h-[300px] max-h-[90vh] border border-gray-300 rounded-xl">
           <img
-            className="absolute inset-0 w-[var(--position)] h-full object-cover object-left filter grayscale"
+            className="absolute inset-0 w-[var(--position)] h-full object-cover object-left filter grayscale rounded-xl"
             src={beforeImg}
             alt="before photo"
           />
           <img
-            className="w-full h-full object-cover object-left"
+            className="w-full h-full object-cover object-left rounded-xl"
             src={afterImg}
             alt="after photo"
           />
