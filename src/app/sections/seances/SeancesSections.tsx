@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export const SeancesSection = () => {
   return (
@@ -44,22 +45,31 @@ export const SeancesSection = () => {
           </div>
         </div>
         <div className="lg:flex-1 lg:sticky lg:top-4 lg:self-start items-center">
-          <img
-            src="/images/seances/6.jpg"
-            alt=""
-            className="aspect-[7/5] w-[20rem] mt-8 lg:mt-0 lg:w-[28rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-          />
+          <div className=" relative container aspect-[7/5] w-[20rem] mt-8 lg:mt-0 lg:w-[28rem] max-w-none bg-gray-50 ">
+            <Image
+              src="/images/seances/6.jpg"
+              alt=""
+              className="rounded-2xl object-cover"
+              fill
+            />
+          </div>
           <div className="flex">
-            <img
-              src="/images/seances/5.jpg"
-              alt=""
-              className="aspect-[4/3] w-[12rem]  lg:w-[16rem] mt-5  max-w-none flex-none rounded-2xl bg-gray-50 object-cover hidden sm:block"
-            />
-            <img
-              src="/images/seances/3.jpg"
-              alt=""
-              className="aspect-[4/3] w-[20rem] lg:w-[20rem] mt-5  sm:ml-5 ml-0 max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-            />
+            <div className="relative container aspect-[4/3] w-[12rem]  lg:w-[16rem] mt-5  max-w-none flex-none  bg-gray-50  hidden sm:block">
+              <Image
+                src="/images/seances/5.jpg"
+                alt=""
+                className="rounded-2xl object-cover"
+                fill
+              />
+            </div>
+            <div className="relative container aspect-[4/3] w-[20rem] lg:w-[20rem] mt-5  sm:ml-5 ml-0 max-w-none flex-none rounded-2xl bg-gray-50 ">
+              <Image
+                src="/images/seances/3.jpg"
+                alt=""
+                fill
+                className="rounded-2xl object-cover "
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -54,11 +55,14 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                     <div className="relative w-full">
                       {imageUrl && (
                         <div className="relative w-full">
-                          <img
-                            src={imageUrl}
-                            alt=""
-                            className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                          />
+                          <div className=" container relative aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                            <Image
+                              src={imageUrl}
+                              alt=""
+                              fill
+                              className="rounded-2xl"
+                            />
+                          </div>
                           <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                         </div>
                       )}

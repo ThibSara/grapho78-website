@@ -1,0 +1,44 @@
+.styled-content img {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.styled-content p {
+    margin-bottom: 1.5rem;
+}
+
+.styled-content h1,
+.styled-content h2,
+.styled-content h3,
+.styled-content h4,
+.styled-content h5,
+.styled-content h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    color: #004593;
+}
+
+.styled-content ul,
+.styled-content ol {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.styled-content ul li::marker,
+.styled-content ol li::marker {
+    color: #004593;
+}
+
+.styled-content blockquote {
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #F89BC0;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    font-style: italic;
+}

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 export const BilanSection = () => {
   return (
@@ -19,11 +20,14 @@ export const BilanSection = () => {
       </div>
 
       <div className="lg:sticky lg:top-4 lg:self-start lg:block hidden">
-        <img
-          src="/images/seances/1.jpg"
-          alt=""
-          className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-        />
+        <div className=" container relative aspect-[7/5] w-[37rem] max-w-none  bg-gray-50 object-cover">
+          <Image
+            src="/images/seances/1.jpg"
+            className="rounded-2xl"
+            alt=""
+            fill
+          />
+        </div>
       </div>
       <div className="lg:flex lg:items-start lg:gap-x-12 ">
         <div className="lg:ml-8 mt-10 lg:mt-0">
@@ -60,11 +64,14 @@ export const BilanSection = () => {
             </span>
           </div>
           <div className="lg:sticky mt-8 lg:top-4 lg:self-start  lg:hidden items-center flex justify-center">
-            <img
-              src="/images/seances/1.jpg"
-              alt=""
-              className="aspect-[7/5] w-full max-w-[37rem] rounded-2xl bg-gray-50 object-cover"
-            />
+            <div className="container relative aspect-[7/5] w-full max-w-[37rem] rounded-2xl bg-gray-50">
+              <Image
+                src="/images/seances/1.jpg"
+                alt=""
+                fill
+                className="rounded-2xl object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
