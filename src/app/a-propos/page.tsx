@@ -4,6 +4,7 @@ import { HeroSection } from "../sections/a-propos/HeroSection";
 import { BlogSection } from "../sections/common/BlogSection";
 import { motion } from "framer-motion";
 import { reqUrl } from "@/app/config";
+import { LoadingSection } from "../sections/common/LoadingSection";
 
 interface BlogPost {
   id: number;
@@ -47,7 +48,7 @@ const Page: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingSection />;
   }
 
   if (error) {
