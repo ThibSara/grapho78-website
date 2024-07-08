@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { reqUrl } from "@/app/config";
 import { LoadingSection } from "../sections/common/LoadingSection";
 import "./styles.css";
 import { BlogSection } from "../sections/common/BlogSection";
@@ -32,20 +31,13 @@ const Page: React.FC<PageProps> = ({ params }) => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const req = await fetch(
-          `${reqUrl}posts?_fields=id,slug,title,content&slug=${
-            params.slug
-          }&t=${new Date().getTime()}`,
-          {
-            cache: "force-cache",
-          }
-        );
+        const req = await fetch(`/api/blog-posts?slug=${params.slug}`);
         if (!req.ok) {
-          throw new Error("Failed to fetch");
+          throw new Error("Failed to fetch post");
         }
-        const post: BlogPost[] = await req.json();
-        if (post.length > 0) {
-          setPost(post[0]);
+        const posts: BlogPost[] = await req.json();
+        if (posts.length > 0) {
+          setPost(posts[0]);
         } else {
           throw new Error("Post not found");
         }
@@ -58,12 +50,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
     const fetchBlogPosts = async () => {
       try {
-        const req = await fetch(
-          `${reqUrl}posts?_fields=id,slug,title,date,content`,
-          {
-            cache: "force-cache",
-          }
-        );
+        const req = await fetch("/api/blog-posts");
         if (!req.ok) {
           throw new Error("Failed to fetch blog posts");
         }

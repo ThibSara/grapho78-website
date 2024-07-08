@@ -26,12 +26,7 @@ const Page: React.FC = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const req = await fetch(
-          `${reqUrl}posts?_fields=id,slug,title,date,content`,
-          {
-            cache: "force-cache",
-          }
-        );
+        const req = await fetch("/api/blog-posts");
         if (!req.ok) {
           throw new Error("Failed to fetch");
         }
