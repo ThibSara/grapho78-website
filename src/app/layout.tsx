@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavBar } from "./sections/common/NavBar";
 import { Footer } from "./sections/common/Footer";
 import { Cursor } from "./sections/common/cursor/Cursor";
+import Script from "next/script";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -19,6 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1GCM6MWZS8"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1GCM6MWZS8');`}
+        </Script>
+      </head>
       <body className={"${urbanist.className} bg-white"}>
         <Cursor />
         <NavBar />
