@@ -1,12 +1,61 @@
 "use client";
-import { NavBar } from "./sections/common/NavBar";
+import React, { useEffect, useState } from "react";
 import { HeroSection } from "./sections/home/HeroSection";
 import { ContentSection } from "./sections/home/ContentSection";
 import { BlogSection } from "./sections/common/BlogSection";
 import { CTASection } from "./sections/home/CTASection";
 import { motion } from "framer-motion";
+import { reqUrl } from "@/app/config";
 
-export default function Home() {
+interface BlogPost {
+  id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+  date: string;
+  content: {
+    rendered: string;
+  };
+}
+
+const Home: React.FC = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const req = await fetch(
+          `${reqUrl}posts?_fields=id,slug,title,date,content`,
+          {
+            cache: "force-cache",
+          }
+        );
+        if (!req.ok) {
+          throw new Error("Failed to fetch");
+        }
+        const blogPosts: BlogPost[] = await req.json();
+        setBlogPosts(blogPosts);
+      } catch (error: any) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,7 +65,9 @@ export default function Home() {
       <HeroSection />
       <ContentSection />
       <CTASection />
-      <BlogSection />
+      <BlogSection blogPosts={blogPosts} />
     </motion.div>
   );
-}
+};
+
+export default Home;
