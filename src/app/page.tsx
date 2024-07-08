@@ -6,6 +6,7 @@ import { BlogSection } from "./sections/common/BlogSection";
 import { CTASection } from "./sections/home/CTASection";
 import { motion } from "framer-motion";
 import { reqUrl } from "@/app/config";
+import { LoadingSection } from "./sections/common/LoadingSection";
 
 interface BlogPost {
   id: number;
@@ -49,7 +50,7 @@ const Home: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingSection />;
   }
 
   if (error) {
