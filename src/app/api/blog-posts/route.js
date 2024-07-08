@@ -1,6 +1,8 @@
 import axios from 'axios';
 import cache from 'memory-cache';
 import { NextResponse } from 'next/server';
+export const dynamic = 'force-dynamic';
+
 
 export async function GET() {
   const cachedPosts = cache.get('blogPosts');
