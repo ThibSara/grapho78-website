@@ -6,8 +6,8 @@ const childrens = [
   {
     key: 1,
     title: "Léo",
-    imageUrlBefore: "/images/before-after/lea/before.png",
-    imageUrlAfter: "/images/before-after/lea/after.png",
+    imageUrlBefore: "/images/before-after/lea/before.avif",
+    imageUrlAfter: "/images/before-after/lea/after.avif",
     age: "11 ans",
     grade: "6e",
     caption: "Avant après 6 séances.",
@@ -15,8 +15,8 @@ const childrens = [
   {
     key: 2,
     title: "Thomas",
-    imageUrlBefore: "/images/before-after/thomas/before.png",
-    imageUrlAfter: "/images/before-after/thomas/after.png",
+    imageUrlBefore: "/images/before-after/thomas/before.avif",
+    imageUrlAfter: "/images/before-after/thomas/after.avif",
     age: "8 ans",
     grade: "CE2",
     caption: "Avant après 7 séances.",
@@ -24,8 +24,8 @@ const childrens = [
   {
     key: 3,
     title: "Emilie",
-    imageUrlBefore: "/images/before-after/emilie/before.png",
-    imageUrlAfter: "/images/before-after/emilie/after.png",
+    imageUrlBefore: "/images/before-after/emilie/before.avif",
+    imageUrlAfter: "/images/before-after/emilie/after.avif",
     age: "16 ans",
     grade: "1ère",
     caption: "Avant après 7 séances.",
