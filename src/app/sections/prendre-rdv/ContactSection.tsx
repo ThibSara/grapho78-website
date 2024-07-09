@@ -109,6 +109,7 @@ export const ContactSection = () => {
                     src="/images/seances/2.avif"
                     alt=""
                     fill
+                    priority
                     className="rounded-2xl object-cover"
                   />
                 </div>

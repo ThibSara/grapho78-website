@@ -76,7 +76,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="py-24 sm:py-36 items-center mx-auto justify-center max-w-4xl flex flex-col"
     >
       <h1

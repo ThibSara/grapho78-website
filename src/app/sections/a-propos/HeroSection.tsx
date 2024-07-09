@@ -4,7 +4,13 @@ import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { cn } from "@/app/lib/utils";
-import DotPattern from "@/app/components/magicui/dot-pattern";
+import DotPattern from "@/components/magicui/dot-pattern";
+import { motion } from "framer-motion";
+import NumberTicker from "@/components/magicui/number-ticker";
+
+interface HeroSectionProps {
+  onSplineLoad: () => void;
+}
 
 const stats = [
   { label: "diplomée en", value: "2008" },
@@ -12,14 +18,7 @@ const stats = [
   { label: "élèves", value: "1000", prefix: "+" },
 ];
 
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
-
-export const HeroSection = () => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
   return (
     <div className="py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -36,10 +35,17 @@ export const HeroSection = () => {
                   />
                 </div>
 
-                <Spline
-                  scene="https://prod.spline.design/SNniUrXIrTCv2qHa/scene.splinecode"
-                  className="relative z-10 w-full h-full"
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <Spline
+                    scene="https://prod.spline.design/SNniUrXIrTCv2qHa/scene.splinecode"
+                    className="relative z-10 w-full h-full"
+                    onLoad={onSplineLoad}
+                  />
+                </motion.div>
               </div>
             </div>
             <div>
@@ -83,12 +89,17 @@ export const HeroSection = () => {
                           {stat.prefix}
                         </span>
                       )}
-                      <dd className="text-4xl font-bold leading-10 tracking-tight text-gray-900">
-                        <AnimatedNumbers
-                          animateToNumber={parseInt(stat.value)}
-                          locale="en-US"
-                        />
-                      </dd>
+                      {stat.label != "élèves" && (
+                        <dd className="text-4xl font-bold leading-10 tracking-tight text-gray-900">
+                          {parseInt(stat.value)}
+                        </dd>
+                      )}
+                      {stat.label === "élèves" && (
+                        <dd className="text-4xl font-bold leading-10 tracking-tight text-gray-900">
+                          <NumberTicker value={parseInt(stat.value)} />
+                        </dd>
+                      )}
+
                       {stat.postfix && (
                         <span className="text-sm font-bold leading-6">
                           {stat.postfix}

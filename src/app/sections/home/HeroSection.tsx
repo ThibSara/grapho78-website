@@ -3,7 +3,11 @@ import { ArrowDown } from "lucide-react";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  onSplineLoad: () => void;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
   const handleScroll = () => {
     window.scrollTo({
       top: window.innerHeight - 100,
@@ -34,7 +38,16 @@ export const HeroSection = () => {
               className="relative overflow-hidden"
               style={{ height: "180px" }}
             >
-              <Spline scene="https://prod.spline.design/rbboLN2iuGtIJRWR/scene.splinecode" />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <Spline
+                  scene="https://prod.spline.design/rbboLN2iuGtIJRWR/scene.splinecode"
+                  onLoad={onSplineLoad}
+                />
+              </motion.div>
             </div>
             <p className="mt-6 text-lg leading-8 text-gray-700">
               La graphothérapie est une discipline qui vise à améliorer
