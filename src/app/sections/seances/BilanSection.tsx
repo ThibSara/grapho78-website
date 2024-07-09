@@ -22,7 +22,7 @@ export const BilanSection = () => {
       <div className="lg:sticky lg:top-4 lg:self-start lg:block hidden">
         <div className=" container relative aspect-[7/5] w-[37rem] max-w-none  bg-gray-50 object-cover">
           <Image
-            src="/images/seances/1.jpg"
+            src="/images/seances/1.avif"
             className="rounded-2xl"
             alt=""
             fill
@@ -66,7 +66,7 @@ export const BilanSection = () => {
           <div className="lg:sticky mt-8 lg:top-4 lg:self-start  lg:hidden items-center flex justify-center">
             <div className="container relative aspect-[7/5] w-full max-w-[37rem] rounded-2xl bg-gray-50">
               <Image
-                src="/images/seances/1.jpg"
+                src="/images/seances/1.avif"
                 alt=""
                 fill
                 className="rounded-2xl object-cover"
