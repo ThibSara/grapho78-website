@@ -60,7 +60,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                               src={imageUrl}
                               alt=""
                               fill
-                              className="rounded-2xl"
+                              className="rounded-2xl object-cover"
                             />
                           </div>
                           <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />

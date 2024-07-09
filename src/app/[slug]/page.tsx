@@ -30,14 +30,23 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
   useEffect(() => {
     const fetchPost = async () => {
+      setLoading(true);
+      setError(null);
+
       try {
-        const req = await fetch(`/api/blog-posts?slug=${params.slug}`);
+        const req = await fetch("/api/blog-posts");
         if (!req.ok) {
-          throw new Error("Failed to fetch post");
+          throw new Error("Failed to fetch posts");
         }
-        const posts: BlogPost[] = await req.json();
-        if (posts.length > 0) {
-          setPost(posts[0]);
+        const blogPosts: BlogPost[] = await req.json();
+        setBlogPosts(blogPosts);
+
+        const matchingPost = blogPosts.find(
+          (post) => post.slug === params.slug
+        );
+
+        if (matchingPost) {
+          setPost(matchingPost);
         } else {
           throw new Error("Post not found");
         }
@@ -48,21 +57,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
       }
     };
 
-    const fetchBlogPosts = async () => {
-      try {
-        const req = await fetch("/api/blog-posts");
-        if (!req.ok) {
-          throw new Error("Failed to fetch blog posts");
-        }
-        const blogPosts: BlogPost[] = await req.json();
-        setBlogPosts(blogPosts);
-      } catch (error: any) {
-        console.error("Error fetching blog posts:", error.message);
-      }
-    };
-
     fetchPost();
-    fetchBlogPosts();
   }, [params.slug]);
 
   if (loading) {
