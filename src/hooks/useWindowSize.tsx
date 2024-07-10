@@ -19,10 +19,12 @@ const useWindowSize = (): WindowSize => {
       });
     };
 
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Call handler right away so state gets updated with initial window size
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return windowSize;
