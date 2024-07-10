@@ -167,7 +167,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
             </div>
           </div>
           <div className="lg:pr-4">
-            <div className="relative overflow-hidden px-6 pb-9 pt-10 flex flex-col items-center sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+            <div className="relative overflow-hidden px-6 pb-9 pt-10 flex flex-col items-center sm:px-12 max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
               <DotPattern
                 className={cn(
                   "[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
