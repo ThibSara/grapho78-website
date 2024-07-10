@@ -75,14 +75,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                     et graphologie.
                   </p>
                 </div>
-                <div className="lg:hidden items-center flex justify-center mt-4">
-                  <Image
-                    src="/images/3D/sandrine.avif"
-                    alt="sandrine-image"
-                    height={300}
-                    width={300}
-                    className="lg:hidden"
-                  />
+                <div className=" lg:hidden flex justify-center items-center mt-4">
+                  <div className="w-full max-w-xs">
+                    <Image
+                      src="/images/3D/sandrine.avif"
+                      alt="sandrine-image"
+                      layout="responsive"
+                      width={400}
+                      height={400}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
               <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-3">
