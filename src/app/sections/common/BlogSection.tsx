@@ -27,12 +27,24 @@ const stripHtmlTags = (content: string) => {
   div.innerHTML = content;
   return div.textContent || div.innerText || "";
 };
+
+type BlogPost = {
+  id: number;
+  slug: string;
+  content: { rendered: string };
+  date: string;
+  title: { rendered: string };
+};
+
 type BlogSectionProps = {
-  blogPosts: any[];
+  blogPosts: BlogPost[];
 };
 
 export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
   const windowSize = useWindowSize();
+  const isVertical = windowSize.width && windowSize.width < 640;
+  const displayedPosts = isVertical ? blogPosts.slice(0, 3) : blogPosts;
+
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -44,21 +56,19 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
 
         <Carousel
           className="mt-20 relative"
-          orientation={
-            windowSize.width && windowSize.width < 640
-              ? "vertical"
-              : "horizontal"
-          }
+          orientation={isVertical ? "vertical" : "horizontal"}
         >
           <CarouselContent>
-            {blogPosts.map((post) => {
+            {displayedPosts.map((post) => {
               const imageUrl = extractImageUrl(post.content.rendered);
               const textContent = removeImageTags(post.content.rendered);
 
               return (
                 <CarouselItem
                   key={post.id}
-                  className="flex-shrink-0 basis-1/3 px-6"
+                  className={`flex-shrink-0 px-6 ${
+                    isVertical ? "h-1/3" : "sm:basis-1/3"
+                  }`}
                 >
                   <a
                     className="flex flex-col items-start justify-between"
@@ -67,7 +77,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                     <div className="relative w-full">
                       {imageUrl && (
                         <div className="relative w-full">
-                          <div className=" container relative aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                          <div className="container relative aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
                             <Image
                               src={imageUrl}
                               alt=""
@@ -95,12 +105,14 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                             />
                           </a>
                         </h3>
-                        <p
-                          className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600"
-                          dangerouslySetInnerHTML={{
-                            __html: textContent,
-                          }}
-                        ></p>
+                        {!isVertical && (
+                          <p
+                            className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600"
+                            dangerouslySetInnerHTML={{
+                              __html: textContent,
+                            }}
+                          ></p>
+                        )}
                       </div>
                     </div>
                   </a>
