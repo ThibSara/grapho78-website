@@ -77,16 +77,17 @@ const Page: React.FC<PageProps> = ({ params }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="py-24 sm:py-36 items-center mx-auto justify-center max-w-4xl flex flex-col"
     >
-      <h1
-        className="text-3xl font-bold tracking-tight text-blue sm:text-4xl pb-12"
-        dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-      ></h1>
-      <div
-        className="styled-content"
-        dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-      ></div>
+      <div className="py-24 sm:py-36 items-center mx-auto justify-center max-w-4xl flex flex-col">
+        <h1
+          className="text-3xl font-bold tracking-tight text-blue sm:text-4xl pb-12"
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        ></h1>
+        <div
+          className="styled-content"
+          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+        ></div>
+      </div>
       <BlogSection blogPosts={blogPosts} />
     </motion.div>
   );

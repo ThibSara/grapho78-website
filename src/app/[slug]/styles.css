@@ -42,3 +42,10 @@
     border-radius: 8px;
     font-style: italic;
 }
+
+.styled-content p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: #4a5568;
+
+}

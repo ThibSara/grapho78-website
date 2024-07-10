@@ -51,7 +51,10 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                   key={post.id}
                   className="flex-shrink-0 sm:basis-1/3 px-6"
                 >
-                  <article className="flex flex-col items-start justify-between">
+                  <a
+                    className="flex flex-col items-start justify-between"
+                    href={post.slug}
+                  >
                     <div className="relative w-full">
                       {imageUrl && (
                         <div className="relative w-full">
@@ -74,7 +77,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                       </div>
                       <div className="group relative">
                         <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                          <a href={post.slug}>
+                          <a>
                             <span
                               className="inset-0"
                               dangerouslySetInnerHTML={{
@@ -91,7 +94,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                         ></p>
                       </div>
                     </div>
-                  </article>
+                  </a>
                 </CarouselItem>
               );
             })}
