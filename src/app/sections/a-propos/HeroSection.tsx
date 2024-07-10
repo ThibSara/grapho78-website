@@ -2,7 +2,6 @@
 import React from "react";
 import Spline from "@splinetool/react-spline";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { cn } from "@/app/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { motion } from "framer-motion";
@@ -25,7 +24,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
         {/* about me content */}
         <div className="items-center justify-center min-h-screen flex">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div className="lg:pr-4">
+            <div className="lg:pr-4 lg:block hidden">
               <div className="relative overflow-hidden rounded-3xl w-full h-auto lg:h-[500px]">
                 <div className="absolute inset-0 z-0">
                   <DotPattern
@@ -76,6 +75,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                     et graphologie.
                   </p>
                 </div>
+                <Image
+                  src="/images/3D/sandrine.avif"
+                  alt="sandrine-image"
+                  height={400}
+                  width={400}
+                  className="lg:hidden items-center justify-center flex mt-4"
+                />
               </div>
               <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-3">
                 {stats.map((stat, statIdx) => (

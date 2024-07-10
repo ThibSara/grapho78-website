@@ -40,7 +40,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
           </h2>
         </div>
 
-        <Carousel className="mt-20 relative">
+        <Carousel className="mt-20 relative" orientation="horizontal">
           <CarouselContent>
             {blogPosts.map((post) => {
               const imageUrl = extractImageUrl(post.content.rendered);

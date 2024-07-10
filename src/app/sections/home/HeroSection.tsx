@@ -2,6 +2,7 @@
 import { ArrowDown } from "lucide-react";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface HeroSectionProps {
   onSplineLoad: () => void;
@@ -46,6 +47,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                 <Spline
                   scene="https://prod.spline.design/rbboLN2iuGtIJRWR/scene.splinecode"
                   onLoad={onSplineLoad}
+                  className=" hidden sm:block"
+                />
+                <Image
+                  src="/images/3D/pencil.avif"
+                  alt="hero-image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="sm:hidden"
                 />
               </motion.div>
             </div>

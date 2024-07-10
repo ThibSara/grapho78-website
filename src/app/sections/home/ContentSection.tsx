@@ -1,6 +1,7 @@
 import React from "react";
 import { Pencil, Eraser, NotebookPen } from "lucide-react";
 import Spline from "@splinetool/react-spline";
+import Image from "next/image";
 
 export const ContentSection = () => {
   return (
@@ -18,8 +19,18 @@ export const ContentSection = () => {
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <Spline scene="https://prod.spline.design/ib3lLZKOTtzCM4BH/scene.splinecode" />
+        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden items-center flex">
+          <Spline
+            scene="https://prod.spline.design/ib3lLZKOTtzCM4BH/scene.splinecode"
+            className="hidden sm:block"
+          />
+          <Image
+            src="/images/3D/book.avif"
+            alt="book-image"
+            width={400}
+            height={400}
+            className="sm:hidden"
+          />
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
