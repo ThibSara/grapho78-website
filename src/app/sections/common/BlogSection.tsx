@@ -96,7 +96,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                           </a>
                         </h3>
                         <p
-                          className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"
+                          className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600"
                           dangerouslySetInnerHTML={{
                             __html: textContent,
                           }}
