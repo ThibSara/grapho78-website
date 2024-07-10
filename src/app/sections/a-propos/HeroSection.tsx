@@ -79,8 +79,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                   <Image
                     src="/images/3D/sandrine.avif"
                     alt="sandrine-image"
-                    height={350}
-                    width={350}
+                    height={300}
+                    width={300}
                     className="lg:hidden"
                   />
                 </div>
