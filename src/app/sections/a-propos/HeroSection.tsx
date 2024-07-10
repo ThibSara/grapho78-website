@@ -19,11 +19,14 @@ const stats = [
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
   return (
-    <div className="py-10">
+    <div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* about me content */}
-        <div className="items-center justify-center min-h-screen flex">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div
+          className="items-center justify-center min-h-screen flex"
+          style={{ minHeight: "calc(100vh - 6rem)" }}
+        >
+          <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4 lg:block hidden">
               <div className="relative overflow-hidden rounded-3xl w-full h-auto lg:h-[500px]">
                 <div className="absolute inset-0 z-0">

@@ -34,7 +34,7 @@ const childrens = [
 
 export const WrittingSection = () => {
   return (
-    <div className="pt-44">
+    <div className="pt-12 sm:pt-24">
       <div
         className="absolute right-0 top-0 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"

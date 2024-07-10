@@ -5,7 +5,10 @@ import Image from "next/image";
 
 export const ContactSection = () => {
   return (
-    <div className="py-24 sm:py-32 min-h-screen flex items-center">
+    <div
+      className="min-h-screen flex items-center"
+      style={{ minHeight: "calc(100vh - 6rem)" }}
+    >
       <div
         className="absolute inset-x-0 top-0 h-full -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"
