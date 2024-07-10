@@ -34,7 +34,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={"${urbanist.className} bg-white"}>
-        <Cursor />
+        <div className="hidden md:block">
+          <Cursor />
+        </div>
         <NavBar />
         {children}
         <Footer />
