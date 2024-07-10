@@ -27,17 +27,8 @@ const stripHtmlTags = (content: string) => {
   div.innerHTML = content;
   return div.textContent || div.innerText || "";
 };
-
-type BlogPost = {
-  id: number;
-  slug: string;
-  content: { rendered: string };
-  date: string;
-  title: { rendered: string };
-};
-
 type BlogSectionProps = {
-  blogPosts: BlogPost[];
+  blogPosts: any[];
 };
 
 export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
@@ -77,7 +68,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                     <div className="relative w-full">
                       {imageUrl && (
                         <div className="relative w-full">
-                          <div className="container relative aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                          <div className=" container relative aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
                             <Image
                               src={imageUrl}
                               alt=""
