@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const extractImageUrl = (content: string) => {
   const imgTagMatch = content.match(/<img[^>]+src="([^">]+)"/);
@@ -31,6 +32,7 @@ type BlogSectionProps = {
 };
 
 export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
+  const windowSize = useWindowSize();
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -40,7 +42,14 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
           </h2>
         </div>
 
-        <Carousel className="mt-20 relative" orientation="horizontal">
+        <Carousel
+          className="mt-20 relative"
+          orientation={
+            windowSize.width && windowSize.width < 640
+              ? "vertical"
+              : "horizontal"
+          }
+        >
           <CarouselContent>
             {blogPosts.map((post) => {
               const imageUrl = extractImageUrl(post.content.rendered);
