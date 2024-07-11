@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { LoadingSection } from "../sections/common/LoadingSection";
 import "./styles.css";
 import { BlogSection } from "../sections/common/BlogSection";
+import { Custom404 } from "../404";
 
 interface BlogPost {
   id: number;
@@ -65,11 +66,11 @@ const Page: React.FC<PageProps> = ({ params }) => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Custom404 />;
   }
 
   if (!post) {
-    return <div>No post found.</div>;
+    return <Custom404 />;
   }
 
   return (
