@@ -11,12 +11,10 @@ interface HeroSectionProps {
   onSplineLoad: () => void;
 }
 
-const currentYear = new Date().getFullYear();
-
 
 const stats = [
   { label: "diplomée en", value: "2011" },
-  { label: "pratique", value: currentYear - 2011, postfix: " ans" },
+  { label: "pratique", value: String(new Date().getFullYear() - 2008), postfix: " ans" },
   { label: "élèves", value: "1000", prefix: "+" },
 ];
 
@@ -147,13 +145,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                 />
               </div>
               <div className="max-w-xl">
-                <p className="mt-6">
-                  Je travaille activement à la GRAFEM, fédération des
-                  graphothérapeutes, en tant que membre du Conseil
-                  d’administration. La Grafem oeuvre pour garantir un haut
-                  niveau d&apos;éthique et de pratiques professionnelles de ses
-                  membres ainsi qu&apos;à la reconnaissance de notre métier.
-                </p>
+              <p className="mt-6">
+                Je travaille activement à la{" "}
+                  <a 
+    href="http://Fede-Grafem.org" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="underline"
+  >
+    GRAFEM
+  </a>
+  , fédération des graphothérapeutes, en tant que membre du Conseil
+  d’administration. La Grafem oeuvre pour garantir un haut
+  niveau d&apos;éthique et de pratiques professionnelles de ses
+  membres ainsi qu&apos;à la reconnaissance de notre métier.
+</p>
                 <p className="mt-8">
                   Je me forme régulièrement afin de pouvoir aider au mieux les
                   enfants : L’EFT (Emotional Freedom Technique), Tipi, Le
