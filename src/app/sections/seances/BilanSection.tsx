@@ -60,7 +60,7 @@ export const BilanSection = () => {
             </h4>
             <div className="h-px flex-auto bg-gray-100" />
             <span className="text-sm font-semibold leading-6 text-pink">
-              120 à 150€
+              150€
             </span>
           </div>
           <div className="lg:sticky mt-8 lg:top-4 lg:self-start  lg:hidden items-center flex justify-center">
