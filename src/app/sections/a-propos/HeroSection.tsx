@@ -152,12 +152,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                   membres ainsi qu&apos;à la reconnaissance de notre métier.
                 </p>
                 <p className="mt-8">
-                  Je fais également partie du bureau de l&apos;AGGE, association
-                  de graphothérapie. Nous organisons des activités entre
-                  graphothérapeutes et proposons des conférences pour promouvoir
-                  et développer notre discipline.
-                </p>
-                <p className="mt-8">
                   Je me forme régulièrement afin de pouvoir aider au mieux les
                   enfants : L’EFT (Emotional Freedom Technique), Tipi, Le
                   crayonnage en miroir, La méthode neuropsychomotrice de Mesker
@@ -175,13 +169,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                 className={cn(
                   "[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
                 )}
-              />
-              <Image
-                src="/images/agge-logo.png"
-                alt="Associations"
-                width={200}
-                height={200}
-                className=" relative z-10 mb-5"
               />
               <Image
                 src="/images/grafem-logo.png"
