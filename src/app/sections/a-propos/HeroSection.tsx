@@ -11,9 +11,12 @@ interface HeroSectionProps {
   onSplineLoad: () => void;
 }
 
+const currentYear = new Date().getFullYear();
+
+
 const stats = [
-  { label: "diplomée en", value: "2008" },
-  { label: "pratique", value: "16", postfix: " ans" },
+  { label: "diplomée en", value: "2011" },
+  { label: "pratique", value: currentYear - 2011, postfix: " ans" },
   { label: "élèves", value: "1000", prefix: "+" },
 ];
 
@@ -62,7 +65,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                   <p className="mt-6">
                     Je suis graphothérapeute, installée au Chesnay, et
                     passionnée par la calligraphie, l&apos;écriture et l’encre.
-                    Depuis 2008, je rééduque l&apos;écriture et le geste
+                    Depuis 2011, je rééduque l&apos;écriture et le geste
                     graphique des enfants et des adolescents, les aidant à
                     améliorer leur écriture tout en leur transmettant ma passion
                     pour l&apos;art de l&apos;écriture sous toutes ses formes.
