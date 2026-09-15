@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronsLeftRight } from "lucide-react";
-import { after, before } from "node:test";
+import Image from "next/image";
 
 interface ImageSliderProps {
   beforeImg: string;
@@ -39,15 +39,24 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
         onMouseMove={handleMouseMove}
       >
         <div className="relative w-[370px] h-[300px] max-h-[90vh] border border-gray-300 rounded-xl">
-          <img
-            className="absolute inset-0 w-[var(--position)] h-full object-cover object-left filter grayscale rounded-l-xl "
-            src={beforeImg}
-            alt="before photo"
-          />
-          <img
-            className="w-full h-full object-cover object-left rounded-r-xl "
+          <div
+            className="absolute inset-0 h-full overflow-hidden rounded-l-xl"
+            style={{ width: `${position}%` }}
+          >
+            <Image
+              src={beforeImg}
+              alt={`Écriture de ${name} avant la rééducation`}
+              width={370}
+              height={300}
+              className="h-full w-[370px] max-w-none object-cover object-left filter grayscale"
+            />
+          </div>
+          <Image
             src={afterImg}
-            alt="after photo"
+            alt={`Écriture de ${name} après la rééducation`}
+            width={370}
+            height={300}
+            className="h-full w-full object-cover object-left rounded-r-xl"
           />
         </div>
         <input

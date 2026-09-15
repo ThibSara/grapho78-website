@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Skeleton } from "@/components/ui/skeleton";
 import useWindowSize from "@/hooks/useWindowSize";
 
 const extractImageUrl = (content: string) => {
@@ -29,12 +30,22 @@ const stripHtmlTags = (content: string) => {
 };
 type BlogSectionProps = {
   blogPosts: any[];
+  loading?: boolean;
+  error?: string | null;
 };
 
-export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
+export const BlogSection: React.FC<BlogSectionProps> = ({
+  blogPosts,
+  loading = false,
+  error = null,
+}) => {
   const windowSize = useWindowSize();
   const isVertical = windowSize.width && windowSize.width < 640;
   const displayedPosts = isVertical ? blogPosts.slice(0, 3) : blogPosts;
+
+  if (!loading && (error || blogPosts.length === 0)) {
+    return null;
+  }
 
   return (
     <div className="py-24 sm:py-32">
@@ -45,6 +56,18 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
           </h2>
         </div>
 
+        {loading ? (
+          <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-3">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="px-6">
+                <Skeleton className="aspect-[16/9] w-full rounded-2xl sm:aspect-[2/1] lg:aspect-[3/2]" />
+                <Skeleton className="mt-8 h-3 w-16" />
+                <Skeleton className="mt-3 h-5 w-3/4" />
+                <Skeleton className="mt-5 h-4 w-full" />
+              </div>
+            ))}
+          </div>
+        ) : (
         <Carousel
           className="mt-20 relative"
           orientation={isVertical ? "vertical" : "horizontal"}
@@ -114,6 +137,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+        )}
       </div>
     </div>
   );
