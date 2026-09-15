@@ -79,7 +79,7 @@ export const ContentSection = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      La graphothérapie comme solution <br />
+                      Un accompagnement sur mesure <br />
                     </strong>{" "}
                     C&apos;est là qu&apos;intervient la graphothérapeute.
                     Spécialiste de l&apos;écriture, elle évalue les besoins

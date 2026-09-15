@@ -57,7 +57,7 @@ export const TestimonialsSection = () => {
           </blockquote>
           <figcaption className="flex items-center justify-center ">
             <div className="space-y-0.5 font-medium  text-center rtl:text-right ms-3">
-              <div>Tierry G.</div>
+              <div>Thierry G.</div>
               <div className="text-sm text-gray-500 ">
                 père de Thomas 12 ans
               </div>

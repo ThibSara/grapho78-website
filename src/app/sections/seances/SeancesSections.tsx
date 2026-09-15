@@ -6,7 +6,7 @@ export const SeancesSection = () => {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-36">
       <div className="lg:flex lg:items-start lg:gap-x-12">
         <div className="lg:flex-1">
-          <h2 className="text-2xl font-bold tracking-tight text-blue">
+          <h2 className="text-3xl font-bold tracking-tight text-blue sm:text-4xl">
             Déroulé d&apos;une séance
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">

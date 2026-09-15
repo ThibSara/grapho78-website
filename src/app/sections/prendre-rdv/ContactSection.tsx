@@ -82,7 +82,7 @@ export const ContactSection = () => {
                       />
                     </dt>
                     <dd className="text-base font-semibold leading-7 text-blue">
-                      8 rue des deux cousins, le Chesnay
+                      8 rue des deux cousins, Le Chesnay
                     </dd>
                   </div>
                 </dl>
