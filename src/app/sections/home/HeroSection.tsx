@@ -3,12 +3,18 @@ import { ArrowDown } from "lucide-react";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface HeroSectionProps {
   onSplineLoad: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
+  const { width } = useWindowSize();
+  // Only mount the (heavy) 3D scene on screens where it's actually shown,
+  // instead of loading it everywhere and hiding it with CSS on mobile.
+  const showSpline = width !== undefined && width >= 640;
+
   const handleScroll = () => {
     window.scrollTo({
       top: window.innerHeight - 100,
@@ -47,18 +53,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
               >
-                <Spline
-                  scene="https://prod.spline.design/rbboLN2iuGtIJRWR/scene.splinecode"
-                  onLoad={onSplineLoad}
-                  className=" hidden sm:block"
-                />
-                <Image
-                  src="/images/3D/pencil.avif"
-                  alt="hero-image"
-                  layout="fill"
-                  objectFit="cover"
-                  className="sm:hidden"
-                />
+                {showSpline ? (
+                  <Spline
+                    scene="https://prod.spline.design/rbboLN2iuGtIJRWR/scene.splinecode"
+                    onLoad={onSplineLoad}
+                  />
+                ) : (
+                  <Image
+                    src="/images/3D/pencil.avif"
+                    alt="hero-image"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                )}
               </motion.div>
             </div>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-700">

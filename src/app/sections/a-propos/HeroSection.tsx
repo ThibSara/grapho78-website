@@ -6,6 +6,7 @@ import { cn } from "@/app/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { motion } from "framer-motion";
 import NumberTicker from "@/components/magicui/number-ticker";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface HeroSectionProps {
   onSplineLoad: () => void;
@@ -19,6 +20,11 @@ const stats = [
 ];
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
+  const { width } = useWindowSize();
+  // Only mount the (heavy) 3D scene on screens where it's actually shown,
+  // instead of loading it everywhere and hiding it with CSS below lg.
+  const showSpline = width !== undefined && width >= 1024;
+
   return (
     <div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -28,29 +34,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
           style={{ minHeight: "calc(100vh - 6rem)" }}
         >
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div className="lg:pr-4 lg:block hidden">
-              <div className="relative overflow-hidden rounded-3xl w-full h-auto lg:h-[500px]">
-                <div className="absolute inset-0 z-0">
-                  <DotPattern
-                    className={cn(
-                      "[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
-                    )}
-                  />
-                </div>
+            {showSpline && (
+              <div className="lg:pr-4 lg:block hidden">
+                <div className="relative overflow-hidden rounded-3xl w-full h-auto lg:h-[500px]">
+                  <div className="absolute inset-0 z-0">
+                    <DotPattern
+                      className={cn(
+                        "[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
+                      )}
+                    />
+                  </div>
 
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                >
-                  <Spline
-                    scene="https://prod.spline.design/SNniUrXIrTCv2qHa/scene.splinecode"
-                    className="relative z-10 w-full h-full"
-                    onLoad={onSplineLoad}
-                  />
-                </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Spline
+                      scene="https://prod.spline.design/SNniUrXIrTCv2qHa/scene.splinecode"
+                      className="relative z-10 w-full h-full"
+                      onLoad={onSplineLoad}
+                    />
+                  </motion.div>
+                </div>
               </div>
-            </div>
+            )}
             <div>
               <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
                 <p className="text-base font-semibold leading-7 text-pink">

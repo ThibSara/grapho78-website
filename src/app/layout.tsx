@@ -98,7 +98,7 @@ export default function RootLayout({
           <Cursor />
         </div>
         <NavBar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
