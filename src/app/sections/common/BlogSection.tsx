@@ -71,7 +71,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
                           <div className=" container relative aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
                             <Image
                               src={imageUrl}
-                              alt=""
+                              alt={post.title.rendered}
                               fill
                               className="rounded-2xl object-cover"
                             />

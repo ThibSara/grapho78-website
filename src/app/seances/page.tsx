@@ -1,22 +1,21 @@
-"use client";
-import { motion } from "framer-motion";
-import React from "react";
-import { WrittingSection } from "../sections/seances/WrittingSection";
-import { CTASection } from "../sections/seances/CTASection";
-import { BilanSection } from "../sections/seances/BilanSection";
-import { SeancesSection } from "../sections/seances/SeancesSections";
+import type { Metadata } from "next";
+import PageClient from "./PageClient";
 
-export default function page() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <WrittingSection />
-      <BilanSection />
-      <SeancesSection />
-      <CTASection />
-    </motion.div>
-  );
+export const metadata: Metadata = {
+  title: "Les séances de graphothérapie",
+  description:
+    "Découvrez le déroulement des séances de graphothérapie : bilan graphomoteur, rééducation de l'écriture et suivi personnalisé au Chesnay (Yvelines).",
+  alternates: {
+    canonical: "/seances",
+  },
+  openGraph: {
+    title: "Les séances de graphothérapie | La Graphothérapie",
+    description:
+      "Découvrez le déroulement des séances de graphothérapie : bilan graphomoteur, rééducation de l'écriture et suivi personnalisé au Chesnay (Yvelines).",
+    url: "/seances",
+  },
+};
+
+export default function Page() {
+  return <PageClient />;
 }

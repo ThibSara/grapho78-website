@@ -1,20 +1,21 @@
-"use client";
-import React from "react";
-import { TestimonialsSection } from "../sections/prendre-rdv/TestimonialsSection";
-import { ContactSection } from "../sections/prendre-rdv/ContactSection";
-import { FAQSection } from "../sections/prendre-rdv/FAQSection";
-import { motion } from "framer-motion";
+import type { Metadata } from "next";
+import PageClient from "./PageClient";
 
-export default function page() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <ContactSection />
-      <FAQSection />
-      <TestimonialsSection />
-    </motion.div>
-  );
+export const metadata: Metadata = {
+  title: "Prendre rendez-vous",
+  description:
+    "Contactez Sandrine Thibierge pour prendre rendez-vous : téléphone, email ou formulaire. Cabinet de graphothérapie situé au Chesnay (Yvelines).",
+  alternates: {
+    canonical: "/prendre-rdv",
+  },
+  openGraph: {
+    title: "Prendre rendez-vous | La Graphothérapie",
+    description:
+      "Contactez Sandrine Thibierge pour prendre rendez-vous : téléphone, email ou formulaire. Cabinet de graphothérapie situé au Chesnay (Yvelines).",
+    url: "/prendre-rdv",
+  },
+};
+
+export default function Page() {
+  return <PageClient />;
 }

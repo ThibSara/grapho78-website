@@ -24,7 +24,7 @@ export const BilanSection = () => {
           <Image
             src="/images/seances/1.avif"
             className="rounded-2xl"
-            alt=""
+            alt="Bilan graphomoteur lors d'une séance de graphothérapie"
             fill
           />
         </div>
@@ -67,7 +67,7 @@ export const BilanSection = () => {
             <div className="container relative aspect-[7/5] w-full max-w-[37rem] rounded-2xl bg-gray-50">
               <Image
                 src="/images/seances/1.avif"
-                alt=""
+                alt="Bilan graphomoteur lors d'une séance de graphothérapie"
                 fill
                 className="rounded-2xl object-cover"
               />

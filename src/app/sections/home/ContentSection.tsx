@@ -13,9 +13,9 @@ export const ContentSection = () => {
               <p className="text-base font-semibold leading-7 text-pink">
                 La graphothérapie comme solution
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
                 L&apos;écriture
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
