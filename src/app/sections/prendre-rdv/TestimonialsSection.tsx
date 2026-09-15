@@ -2,7 +2,7 @@ import React from "react";
 
 export const TestimonialsSection = () => {
   return (
-    <main className="mx-auto max-w-7xl px-6 lg:px-8 mt-24">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24">
       <div className="flex items-center justify-center py-8">
         <h2 className="text-2xl font-bold leading-10 tracking-tight text-blue">
           Vos témoignages
@@ -85,6 +85,6 @@ export const TestimonialsSection = () => {
           </figcaption>
         </figure>
       </div>
-    </main>
+    </div>
   );
 };

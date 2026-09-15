@@ -1,5 +1,4 @@
 "use client";
-import Spline from "@splinetool/react-spline";
 import Link from "next/link";
 import PAGES_NAMES from "./constants/PAGES_NAMES";
 
