@@ -132,9 +132,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
         <div className="mx-auto mt-24 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div>
             <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-blue sm:text-4xl">
                 Mes associations
-              </h1>
+              </h2>
               <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                 <div
                   className="relative left-[-3rem] aspect-[1155/678] w-[20rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[-6rem] sm:w-[40rem]"

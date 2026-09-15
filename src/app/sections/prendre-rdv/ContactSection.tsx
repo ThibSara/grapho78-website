@@ -101,7 +101,7 @@ export const ContactSection = () => {
               <div className="container relative aspect-[7/5] w-[20rem] mt-8 lg:mt-0 lg:w-[24rem] max-w-none rounded-2xl bg-gray-50">
                 <Image
                   src="/images/sandrine-thibierge.avif"
-                  alt=""
+                  alt="Sandrine Thibierge, graphothérapeute"
                   fill
                   className="rounded-2xl object-cover"
                 />
@@ -110,7 +110,7 @@ export const ContactSection = () => {
                 <div className=" container relative aspect-[4/3] w-[12rem]  lg:w-[16rem] mt-5  max-w-none flex-none rounded-2xl bg-gray-50 hidden sm:block">
                   <Image
                     src="/images/seances/2.avif"
-                    alt=""
+                    alt="Séance de graphothérapie"
                     fill
                     priority
                     className="rounded-2xl object-cover"
@@ -119,7 +119,7 @@ export const ContactSection = () => {
                 <div className="container relative  aspect-[4/3] w-[20rem] lg:w-[16rem] mt-5  sm:ml-5 ml-0 max-w-none flex-none rounded-2xl bg-gray-50">
                   <Image
                     src="/images/seances/7.avif"
-                    alt=""
+                    alt="Séance de graphothérapie"
                     fill
                     className="rounded-2xl object-cover"
                   />
