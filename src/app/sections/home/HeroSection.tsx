@@ -61,7 +61,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                 />
               </motion.div>
             </div>
-            <p className="mt-6 text-lg leading-8 text-gray-700">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-700">
               La graphothérapie est une discipline qui vise à améliorer
               l’écriture, afin de la rendre plus lisible, rapide, soignée et
               agréable. Cette pratique s&apos;adresse principalement aux
@@ -87,7 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSplineLoad }) => {
                 }}
               >
                 <div className="text-sm font-semibold leading-6 text-pink">
-                  En savoir plus
+                  Comment ça marche
                 </div>
 
                 <ArrowDown

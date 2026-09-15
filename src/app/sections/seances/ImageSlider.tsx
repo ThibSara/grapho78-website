@@ -38,7 +38,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
         style={{ "--position": `${position}%` } as React.CSSProperties}
         onMouseMove={handleMouseMove}
       >
-        <div className="relative w-[370px] h-[300px] max-h-[90vh] border border-gray-300 rounded-xl">
+        <div className="relative w-[370px] h-[300px] sm:w-[440px] sm:h-[360px] lg:w-[370px] lg:h-[300px] max-h-[90vh] border border-gray-300 rounded-xl">
           <div
             className="absolute inset-0 h-full overflow-hidden rounded-l-xl"
             style={{ width: `${position}%` }}
@@ -46,16 +46,16 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
             <Image
               src={beforeImg}
               alt={`Écriture de ${name} avant la rééducation`}
-              width={370}
-              height={300}
-              className="h-full w-[370px] max-w-none object-cover object-left filter grayscale"
+              width={440}
+              height={360}
+              className="h-full w-[370px] sm:w-[440px] lg:w-[370px] max-w-none object-cover object-left filter grayscale"
             />
           </div>
           <Image
             src={afterImg}
             alt={`Écriture de ${name} après la rééducation`}
-            width={370}
-            height={300}
+            width={440}
+            height={360}
             className="h-full w-full object-cover object-left rounded-r-xl"
           />
         </div>

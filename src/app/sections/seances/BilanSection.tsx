@@ -31,7 +31,7 @@ export const BilanSection = () => {
       </div>
       <div className="lg:flex lg:items-start lg:gap-x-12 ">
         <div className="lg:ml-8 mt-10 lg:mt-0">
-          <h2 className="text-2xl font-bold tracking-tight text-blue">
+          <h2 className="text-3xl font-bold tracking-tight text-blue sm:text-4xl">
             Déroulé d&apos;un bilan
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">
