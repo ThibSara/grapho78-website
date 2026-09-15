@@ -5,7 +5,6 @@ import { ContentSection } from "./sections/home/ContentSection";
 import { BlogSection } from "./sections/common/BlogSection";
 import { CTASection } from "./sections/home/CTASection";
 import { motion } from "framer-motion";
-import { LoadingSection } from "./sections/common/LoadingSection";
 
 interface BlogPost {
   id: number;
@@ -21,14 +20,12 @@ interface BlogPost {
 
 const Home: React.FC = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [splineLoaded, setSplineLoaded] = useState<boolean>(false);
+  const [blogLoading, setBlogLoading] = useState<boolean>(true);
+  const [blogError, setBlogError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        console.log("Fetching blog posts...");
         const req = await fetch("/api/blog-posts");
         if (!req.ok) {
           throw new Error("Failed to fetch");
@@ -36,33 +33,14 @@ const Home: React.FC = () => {
         const blogPosts: BlogPost[] = await req.json();
         setBlogPosts(blogPosts);
       } catch (error: any) {
-        setError(error.message);
+        setBlogError(error.message);
       } finally {
-        setLoading(false);
+        setBlogLoading(false);
       }
     };
 
     fetchBlogPosts();
   }, []);
-
-  const handleSplineLoad = () => {
-    setSplineLoaded(true);
-  };
-
-  useEffect(() => {
-    if (!loading && splineLoaded) {
-      console.log("Both blog posts and Spline scene loaded.");
-      setLoading(false);
-    }
-  }, [splineLoaded]);
-
-  if (loading) {
-    return <LoadingSection />;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
 
   return (
     <motion.div
@@ -70,10 +48,14 @@ const Home: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <HeroSection onSplineLoad={handleSplineLoad} />
+      <HeroSection onSplineLoad={() => {}} />
       <ContentSection />
       <CTASection />
-      <BlogSection blogPosts={blogPosts} />
+      <BlogSection
+        blogPosts={blogPosts}
+        loading={blogLoading}
+        error={blogError}
+      />
     </motion.div>
   );
 };
